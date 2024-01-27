@@ -31,7 +31,8 @@ export default ChatMessage;
 
 const styles = StyleSheet.create({
   container:{
-    paddingHorizontal: 10,
+    padding: 10,
+
   },
   messageBox:{
     borderRadius: 5,

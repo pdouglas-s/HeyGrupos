@@ -1,9 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-function ChatList({data, deleteRoom }){
+function ChatList({data, deleteRoom, userStatus }){
+
+  const navigation = useNavigation();
+  
+  function openChat(){
+    if(userStatus){
+      navigation.navigate("Messages", { thread: data });
+    }else{
+      navigation.navigate("SignIn");
+    }
+  }
+
   return(
-    <TouchableOpacity onPress={ () => {} } onLongPress={ () => deleteRoom && deleteRoom() }>
+    <TouchableOpacity onPress={ openChat } onLongPress={ () => deleteRoom && deleteRoom() }>
       <View style={styles.row}>
         <View style={styles.content}>
           <View style={styles.header}>

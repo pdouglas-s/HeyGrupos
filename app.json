@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "heyGrupos",
+    "slug": "heyGrupos",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
